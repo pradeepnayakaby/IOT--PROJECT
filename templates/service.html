@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Attack Detection In IOT Using Machine Learning- About Us</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="IoT, Cyber Security, Anomaly Detection, Machine Learning" name="keywords">
+    <meta content="Learn more about our IoT Cyber Attacks Detection project and our mission to secure IoT environments." name="description">
+
+    <!-- Favicon -->
+    <link href="../static/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="../static/css/style.css" rel="stylesheet">
+    <!-- Custom Form Styles -->
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .form-container input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container input[type="submit"] {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        .form-container h2 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h1 class="m-0">Attack Detecion In IOT Using Machine Larning</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{{ url_for('home') }}" class="nav-item nav-link active">Home</a>
+                <a href="{{ url_for('about') }}" class="nav-item nav-link">About</a>
+                <a href="{{ url_for('prediction') }}" class="nav-item nav-link">Prediction</a>
+                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white mb-4 animated slideInDown">Services</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Services</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Service Start -->
+    <div class="form-container">
+        <h2>Attack Detection In IOT Using Machine Learning</h2>
+        <form action="/prediction" method="post">
+            <label for="src_port">Src Port:</label>
+            <input type="number" id="src_port" name="src_port" required><br>
+
+            <label for="dst_port">Dst Port:</label>
+            <input type="number" id="dst_port" name="dst_port" required><br>
+
+            <label for="flow_duration">Flow Duration:</label>
+            <input type="number" id="flow_duration" name="flow_duration" required><br>
+
+            <label for="fwd_pkt_len_std">Fwd Pkt Len Std:</label>
+            <input type="number" id="fwd_pkt_len_std" name="fwd_pkt_len_std" required><br>
+
+            <label for="flow_pkts_s">Flow Pkts/s:</label>
+            <input type="number" id="flow_pkts_s" name="flow_pkts_s" required><br>
+
+            <label for="flow_iat_mean">Flow IAT Mean:</label>
+            <input type="number" id="flow_iat_mean" name="flow_iat_mean" required><br>
+
+            <label for="flow_iat_std">Flow IAT Std:</label>
+            <input type="number" id="flow_iat_std" name="flow_iat_std" required><br>
+
+            <label for="flow_iat_max">Flow IAT Max:</label>
+            <input type="number" id="flow_iat_max" name="flow_iat_max" required><br>
+
+            <label for="fwd_iat_tot">Fwd IAT Tot:</label>
+            <input type="number" id="fwd_iat_tot" name="fwd_iat_tot" required><br>
+
+            <label for="bwd_iat_max">Bwd IAT Max:</label>
+            <input type="number" id="bwd_iat_max" name="bwd_iat_max" required><br>
+
+            <label for="bwd_pkts_s">Bwd Pkts/s:</label>
+            <input type="number" id="bwd_pkts_s" name="bwd_pkts_s" required><br>
+
+            <label for="ack_flag_cnt">ACK Flag Cnt:</label>
+            <input type="number" id="ack_flag_cnt" name="ack_flag_cnt" required><br>
+
+            <label for="init_bwd_win_byts">Init Bwd Win Byts:</label>
+            <input type="number" id="init_bwd_win_byts" name="init_bwd_win_byts" required><br>
+
+            <label for="idle_mean">Idle Mean:</label>
+            <input type="number" id="idle_mean" name="idle_mean" required><br>
+
+            <label for="idle_max">Idle Max:</label>
+            <input type="number" id="idle_max" name="idle_max" required><br>
+
+            <input type="submit" value="Predict">
+        </form>
+        <h2>Prediction Result: {{ prediction_text }}</h2>
+    </div>
+    <!-- Service End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/lib/wow/wow.min.js"></script>
+    <script src="../static/lib/easing/easing.min.js"></script>
+    <script src="../static/lib/waypoints/waypoints.min.js"></script>
+    <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../static/lib/counterup/counterup.min.js"></script>
+    <script src="../static/lib/parallax/parallax.min.js"></script>
+    <script src="../static/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="../static/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
